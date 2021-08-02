@@ -11,17 +11,18 @@ import SwiftUI
 struct OnboardingView: View {
     // MARK: - PROPERTIES
     
+    var fruits: [FruitModel] = fruitData
+    
     // MARK: - BODY
     var body: some View {
         TabView {
-            ForEach(0..<5) { item in
-                FruitCardView()
+            ForEach(0..<5) { index in
+                FruitCardView(fruit: fruits[index])
             } //: Loop
             
         } //: TAB
         .tabViewStyle(PageTabViewStyle())
         .padding(.vertical, 20)
-        
     }
 }
 

@@ -17,5 +17,7 @@ struct SettingsLabelView: View {
 struct SettingsLabelView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsLabelView()
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }
